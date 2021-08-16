@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="558.0" style="-fx-background-color: fff;" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <BorderPane prefHeight="403.0" prefWidth="548.0" BorderPane.alignment="CENTER">
+         <top>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="111.0" prefWidth="520.0" text="%login.welcome.label" textAlignment="CENTER">
+                     <font>
+                        <Font name="ALSSchlangesans-Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" disable="true" prefHeight="24.0" prefWidth="520.0" text="Error" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="ALSSchlangesans" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <GridPane alignment="CENTER" prefHeight="166.0" prefWidth="498.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="213.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="loginLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="167.0" text="%login.login.label">
+                     <font>
+                        <Font name="ALSSchlangesans-Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: fff; -fx-border-color: ccc; -fx-border-radius: 8;" GridPane.columnIndex="1" />
+                  <Label fx:id="passwordLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="167.0" text="%login.password.label" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="ALSSchlangesans-Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="pass" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: fff; -fx-border-color: ccc; -fx-border-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="94.0" prefWidth="520.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="log" mnemonicParsing="false" onMouseClicked="#logInClicked" onMousePressed="#buttonPressed" onMouseReleased="#buttonReleased" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: fff; -fx-border-radius: 8; -fx-border-color: #ccc;" text="%login.log.button">
+                     <font>
+                        <Font name="ALSSchlangesans-Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label prefHeight="17.0" prefWidth="106.0" />
+                  <Button fx:id="sign" mnemonicParsing="false" onMouseClicked="#signInClicked" onMousePressed="#buttonPressed" onMouseReleased="#buttonReleased" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: fff; -fx-border-color: ccc; -fx-border-radius: 8;" text="%login.sign.button">
+                     <font>
+                        <Font name="ALSSchlangesans-Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </center>
+   <top>
+      <MenuBar prefHeight="28.0" prefWidth="559.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu fx:id="app" mnemonicParsing="false" text="%login.app.menu">
+               <items>
+                  <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#exitClicked" text="%login.exit.menuItem" />
+               </items>
+            </Menu>
+            <Menu fx:id="settings" mnemonicParsing="false" text="%login.settings.menu">
+               <items>
+                  <Menu fx:id="language" mnemonicParsing="false" text="%login.language.menu">
+                     <items>
+                        <MenuItem fx:id="en" mnemonicParsing="false" onAction="#changeLanguage" text="English" />
+                        <MenuItem fx:id="ru" mnemonicParsing="false" onAction="#changeLanguage" text="Русский" />
+                        <MenuItem fx:id="pl" mnemonicParsing="false" onAction="#changeLanguage" text="Polskie" />
+                        <MenuItem fx:id="et" mnemonicParsing="false" onAction="#changeLanguage" text="Eestlane" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="17.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="17.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
