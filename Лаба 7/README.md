@@ -6,7 +6,7 @@ Client-Server multythread app executing client's commands for working with a col
 
 ## Task ## 
 
-Доработать программу из [лабораторной работы №6](https://github.com/dokerplp/Lab6) следующим образом: 
+Доработать программу из [лабораторной работы №6](https://github.com/dokerplp/java_programming/tree/master/Лаба%206) следующим образом: 
 
 ### Необходимо выполнить следующие требования: ### 
 
