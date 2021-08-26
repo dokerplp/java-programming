@@ -1,4 +1,8 @@
 # Lab6 # 
+![](https://img.shields.io/badge/done-100%25-brightgreen)
+![](https://img.shields.io/badge/passed-yes-brightgreen)
+![](https://img.shields.io/badge/score-12%2F13-green)
+
 Client-Server app executing client's commands for working with a collection of objects
 
 ## Task ## 
