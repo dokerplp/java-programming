@@ -1,4 +1,7 @@
 # Lab7 # 
+![](https://img.shields.io/badge/done-100%25-brightgreen)
+![](https://img.shields.io/badge/passed-yes-brightgreen)
+![](https://img.shields.io/badge/score-10.5%2F13-green)
 
 Option: 213110
 
